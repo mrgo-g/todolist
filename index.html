@@ -16,46 +16,71 @@
     />
 
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <style>
+      #image {
+        display: none;
+      }
+    </style>
   </head>
 
   <body>
     <div class="hero">
+      <button type="button" class="btn btn-danger"onclick="imageShow()">I'm tired!</button>
+        <button type="button" class="btn btn-success"onclick="imageHide()">I'm ok!</button>
+        <div>
+          <img src="lama2.gif" id="image" alt="lama" width="90%"/>
+        </div>
       <div class="container">
-        <h1 class="display-2 text-center">TodoList</h1>
-       
-        <p class="lead text-center">Welcome to your todo list!</p>
+        <h1 class="display-2 text-center">ToDoList</h1>
         
-          <form id="form" class="col-lg-6 col-8 mx-auto">
-            <div class="input-group">
-              <input
-                id="input"
-                class="form-control"
-                placeholder="Enter todo list item"
-                value="I have to do..."
-              />
-              <span>
-                <button id="btn" type="button" class="btn btn-primary">
-                  Add
-                </button>
-              </span>
-            </div>
-          </form>
-        </div>
-        <div class="row">
-          <ul id="list" class="list col-lg-6 col-8 mx-auto"></ul>
-        </div>
-        <div class="row">
-          <button
-            id="btnClr"
-            type="button"
-            class="btn btn-primary mx-auto btnHide"
-          >
-            Everything is done!
-          </button>
-        </div>
+        <p class="lead text-center">Welcome to your todo list!</p>
+       
+       
+        <form id="form" class="col-lg-6 col-8 mx-auto">
+         
+          <div class="input-group">
+            <input
+              id="input"
+              class="form-control"
+              placeholder="Enter todo list item"
+              value="I have to do..."
+            />
+            <span>
+              <button id="btn" type="button" class="btn btn-primary">
+                Add
+              </button>
+            </span>
+          </div>
+        </form>
       </div>
+      <div class="row">
+        <ul id="list" class="list col-lg-6 col-8 mx-auto"></ul>
+      </div>
+      <div class="row">
+        <button
+          id="btnClr"
+          type="button"
+          class="btn btn-primary mx-auto btnHide"
+        >
+          Everything is done!
+        </button>
+      </div>
+     
+
+     
+
+      <script>
+        function imageShow() {
+          document.getElementById("image").style.display = "block";
+        }
+        function imageHide() {
+          document.getElementById("image").style.display = "none";
+        }
+      </script>
     </div>
 
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
+
+
